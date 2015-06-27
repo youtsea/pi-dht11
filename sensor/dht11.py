@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 try:
     import RPi.GPIO as GPIO
-except RuntimeError:
-    print("Super-user access needed",file=sys.stderr)
+except:
+    print "Super-user access needed"
 import time
 
 class HTSensor:

@@ -5,3 +5,4 @@ Rasberry PI integration with a DHT-11 temperature and humidity sensor. Does not 
 
 Author: lestarch
 
+

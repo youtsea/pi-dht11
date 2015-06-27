@@ -1,10 +1,14 @@
-#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 from sensor.dht11 import HTSensor,ReadError
-yolo = HTSensor(29)
-try:
-    humidity, temperature = yolo.read()
-    print("Humidity:",humidity,"Temperature:",temperature)
-except ReadError:
-    print("Read failed")
-finally:
-    yolo.cleanup()
+import time
+
+while True:
+    try:
+        yolo = HTSensor(12)
+        humidity, temperature = yolo.read()
+        print "Humidity:%s, Temperature:%s" % (humidity,temperature)
+    except ReadError:
+        print "Read failed"
+    finally:
+	time.sleep(0.5)
+        yolo.cleanup()
